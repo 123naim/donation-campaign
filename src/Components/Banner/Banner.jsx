@@ -1,5 +1,20 @@
+import { useState } from "react";
 
 const Banner = () => {
+    const [getText, setGetText] = useState('');
+    const [text, setText] = useState('');
+
+    const getInputText = e => {
+        e.preventDefault();
+        setGetText(e.target.value);
+    }
+
+    const handleInputText = getText => {
+        setText(getText)
+    }
+
+    console.log(text)
+
     return (
         <div>
             <div>
@@ -10,8 +25,8 @@ const Banner = () => {
                     <div className="absolute top-[45%] left-[30%]">
                         <h2 className="text-3xl text-black font-bold">I Grow By Helping People In Need</h2>
                         <div className="mt-4 flex justify-center ">
-                            <input className="py-2 pl-5 rounded border" type="text" placeholder="Search here...."/>
-                            <button className="py-2 px-4 rounded-r-lg -ml-1 bg-[#FF444A]">Search</button>
+                            <input onChange={getInputText} className="py-2 pl-5 rounded border" type="text" name="text" placeholder="Search here...." />
+                            <button onClick={() => handleInputText(getText)} className="py-2 px-4 text-white font-semibold rounded-r-lg -ml-1 bg-[#FF444A]">Search</button>
                         </div>
                     </div>
                 </div>

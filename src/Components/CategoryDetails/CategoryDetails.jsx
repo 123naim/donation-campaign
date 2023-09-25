@@ -18,7 +18,7 @@ const CategoryDetails = () => {
     return (
         <div>
             <div className="mt-4 mb-12 mx-auto">
-                <img className="w-full md:h-[400px] lg:h-[580px]" src={category_img} alt="" />
+                <img className="w-full md:h-[400px] lg:h-[510px]" src={category_img} alt="" />
                 <div className="relative">
                     <div className="w-full h-20 -mt-20 bg-black opacity-50">
 

@@ -1,12 +1,17 @@
-import { useLoaderData } from "react-router-dom";
+
 
 import { PieChart, Pie, Cell } from 'recharts';
 import { getStoredDonation } from "../../Utility/localStorage";
 import { useEffect, useState } from "react";
 
 const Statistics = () => {
-    const donations = useLoaderData();
+    const [donations, setDonations] = useState([]);
     const [appliedDonation, setAppliedDonation] = useState([]);
+    useEffect(() =>{
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => setDonations(data))
+    },[])
 
     useEffect(() => {
         const storedDonationId = getStoredDonation();
@@ -42,7 +47,7 @@ const Statistics = () => {
     return (
         <div>
             <div>
-                <PieChart width={1200} height={400}>
+                <PieChart width={1100} height={400}>
                     <Pie
                         data={data}
                         cx="50%"
