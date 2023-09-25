@@ -10,14 +10,7 @@ const Donation = () => {
     useEffect(() => {
         const storedDonationId = getStoredDonation();
         if (donations.length > 0) {
-            const DonationsApplied = donations.filter(donat => storedDonationId.includes(donat.id))
-            // const jobsApplied = [];
-            // for (const id of storedJobIds) {
-            //     const job = jobs.find(job => job.id === id);
-            //     if (job) {
-            //         jobsApplied.push(job)
-            //     }
-            // }
+            const DonationsApplied = donations.filter(donat => storedDonationId.includes(donat.id));
 
             setAppliedDonation(DonationsApplied)
 
