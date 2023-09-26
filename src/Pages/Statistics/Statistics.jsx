@@ -36,10 +36,12 @@ const Statistics = () => {
         const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
         const x = cx + radius * Math.cos(-midAngle * RADIAN);
         const y = cy + radius * Math.sin(-midAngle * RADIAN);
+        const xOffset = x > cx ? -25 : 25;
+        const yOffset = 0;
 
         return (
-            <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" fontSize={25} fontWeight={500}>
-                {`${(percent * 100).toFixed(0)}%`}
+            <text x={x + xOffset} y={y + yOffset} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central" fontSize={25} fontWeight={500}>
+                {`${(percent * 100).toFixed(1)}%`}
             </text>
         );
     };

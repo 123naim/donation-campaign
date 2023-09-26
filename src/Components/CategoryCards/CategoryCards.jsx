@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import CategoryCard from "../CategoryCard/CategoryCard";
-// import Banner from "../Banner/Banner";
 
 const CategoryCards = () => {
     const [categoryCardsData, setCategoryCardsData] = useState([]);
@@ -32,7 +31,6 @@ const CategoryCards = () => {
     return (
         <div>
             <div className="mb-14">
-                {/* <Banner></Banner> */}
                 <div className="relative">
                     <div>
                         <img className="opacity-10 h-3/4 w-full " src="https://i.ibb.co/T1XfzC9/Rectangle-4281.png" alt="" />
