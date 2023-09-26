@@ -7,11 +7,11 @@ import { useEffect, useState } from "react";
 const Statistics = () => {
     const [donations, setDonations] = useState([]);
     const [appliedDonation, setAppliedDonation] = useState([]);
-    useEffect(() =>{
+    useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setDonations(data))
-    },[])
+    }, [])
 
     useEffect(() => {
         const storedDonationId = getStoredDonation();
@@ -23,7 +23,6 @@ const Statistics = () => {
         }
     }, [donations]);
 
-    console.log(appliedDonation.length)
 
     const data = [
         { name: 'Total Donation', value: donations.length - appliedDonation.length },
@@ -49,29 +48,31 @@ const Statistics = () => {
     return (
         <div>
             <div>
-                <PieChart width={1100} height={400}>
-                    <Pie
-                        data={data}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        label={renderCustomizedLabel}
-                        outerRadius={130}
-                        fill="#8884d8"
-                        dataKey="value"
-                    >
-                        {data.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                        ))}
-                    </Pie>
-                </PieChart>
+                <div className='flex justify-center'>
+                    <PieChart width={400} height={400}>
+                        <Pie
+                            data={data}
+                            cx="50%"
+                            cy="50%"
+                            labelLine={false}
+                            label={renderCustomizedLabel}
+                            outerRadius={130}
+                            fill="#8884d8"
+                            dataKey="value"
+                        >
+                            {data.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            ))}
+                        </Pie>
+                    </PieChart>
+                </div>
                 <div className="flex gap-16 justify-center">
-                    <div className="flex gap-4 items-center">
+                    <div className="flex flex-col-reverse md:flex-row gap-4 items-center">
                         <span className="text-xl font-semibold">Your donation</span>
                         <div className="w-24 h-3 mt-1 bg-[#00C49F]">
                         </div>
                     </div>
-                    <div className="flex gap-4 items-center">
+                    <div className="flex flex-col-reverse md:flex-row gap-4 items-center">
                         <span className="text-xl font-semibold">totol donation</span>
                         <div className="w-24 h-3 mt-1 bg-[#FF444A]">
                         </div>

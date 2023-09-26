@@ -35,9 +35,9 @@ const CategoryCards = () => {
                     <div>
                         <img className="opacity-10 h-3/4 w-full " src="https://i.ibb.co/T1XfzC9/Rectangle-4281.png" alt="" />
                     </div>
-                    <div className="absolute top-[45%] left-[30%]">
-                        <h2 className="text-3xl text-black font-bold">I Grow By Helping People In Need</h2>
-                        <div className="mt-4 flex justify-center ">
+                    <div className="absolute top-[18%] left-[4%] md:top-[30%] md:left-[12%] lg:top-[45%] lg:left-[30%]">
+                        <h2 className="text-xl md:text-3xl text-black font-bold">I Grow By Helping People In Need</h2>
+                        <div className="mt-3 md:mt-6 flex justify-center ">
                             <input onChange={getInputText} className="py-2 pl-5 rounded border" type="text" name="text" placeholder="Search here...." />
                             <button onClick={() => handleInputText(getText)} className="py-2 px-4 text-white font-semibold rounded-r-lg -ml-1 bg-[#FF444A]">Search</button>
                         </div>
