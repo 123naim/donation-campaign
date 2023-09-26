@@ -68,13 +68,13 @@ const Statistics = () => {
                 </div>
                 <div className="flex gap-16 justify-center">
                     <div className="flex flex-col-reverse md:flex-row gap-4 items-center">
-                        <span className="text-xl font-semibold">Your donation</span>
-                        <div className="w-24 h-3 mt-1 bg-[#00C49F]">
+                        <span className="text-xl font-semibold">totol donation</span>
+                        <div className="w-24 h-3 mt-1 bg-[#FF444A]">
                         </div>
                     </div>
                     <div className="flex flex-col-reverse md:flex-row gap-4 items-center">
-                        <span className="text-xl font-semibold">totol donation</span>
-                        <div className="w-24 h-3 mt-1 bg-[#FF444A]">
+                        <span className="text-xl font-semibold">Your donation</span>
+                        <div className="w-24 h-3 mt-1 bg-[#00C49F]">
                         </div>
                     </div>
                 </div>

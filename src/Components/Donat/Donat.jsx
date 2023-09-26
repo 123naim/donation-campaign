@@ -8,7 +8,7 @@ const Donat = ({ donat }) => {
         <div>
             <div style={{ backgroundColor: color.card_bg }} className="flex flex-col md:flex-row rounded-lg">
                 <figure>
-                    <img className='w-full h-full rounded-r-lg md:rounded' src={donation_img} alt="Donation" />
+                    <img className='w-full h-full md:w-[215px] rounded-lg md:rounded' src={donation_img} alt="Donation" />
                 </figure>
                 <div className="p-6 md:px-4 md:py-4">
                     <h2> <button className='py-1 px-2 rounded font-semibold ' style={{ backgroundColor: color.category_bg, color: color.text_button_bg }}>{category}</button> </h2>
